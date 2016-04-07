@@ -113,9 +113,7 @@ input[type='reset'],
   -webkit-transition: all .3s linear;
   transform: translate3D(0, 0, 0);
   -webkit-transform: translate3D(0, 0, 0);
-}
-.btn {
-  padding: 6px 15px;
+  outline: 0 !important;
 }
 .btn:active,
 .btn.active,
@@ -162,6 +160,7 @@ input[type='email'],
 input[type='url'],
 input[type='tel'],
 select {
+  background: #fff;
   padding: 8px;
   border: 1px solid #bbb;
   -webkit-appearance: none;
@@ -187,21 +186,9 @@ textarea:focus,
 select:focus {
   -webkit-user-modify: read-write-plaintext-only;
 }
-.lable-style input[type='checkbox'],
-.lable-style input[type='radio'] {
-  -webkit-appearance: none;
-}
-.lable-style input[type='checkbox']:before,
-.lable-style input[type='radio']:before {
+label input {
   display: inline-block;
-  content: '';
-  width: 15px;
-  height: 15px;
-  background: #bbb;
-}
-.lable-style input[type='checkbox']:checked:before,
-.lable-style input[type='radio']:checked:before {
-  background: #07BE50;
+  vertical-align: middle;
 }
 /*文本*/
 .text-center {
@@ -238,5 +225,19 @@ select:focus {
 .fixed {
   position: fixed !important;
   z-index: 1;
+}
+.con,
+.header,
+.tab {
+  padding: 10px;
+  padding-right: 10px;
+}
+.row:after {
+  clear: both;
+  float: none;
+  vertical-align: baseline;
+  display: block;
+  content: '';
+  height: 0;
 }
 /*# sourceMappingURL=_qiu.css.map */

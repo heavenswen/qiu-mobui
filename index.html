@@ -4,18 +4,15 @@
 	<head>
 		<meta charset="utf-8">
 		<title>手机ui模块</title>
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<!--ios-->
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<meta content="telephone=no" name="format-detection" />
-<meta name="author" content="slcw">
-<link rel="shortcut icon" href="favicon.ico" />
-		<link rel="stylesheet" href="/css/qiu-mobui.css" />
+		<link rel="import" href="_meta.html?__inline" />
+		<link rel="stylesheet" href="css/qiu-mobui.css" />
 	</head>
 		<style>
 			ul h2{ text-align: center; font-weight: normal;font-size: 1.6rem;}
 			ul li{ margin-bottom: 10px;}
+			li.label-style{
+				background: #fcc !important;
+			}
 		</style>
 	<body>
 		<header class=" fixed header">
@@ -96,31 +93,57 @@
 				<li>
 					<span>单选</span>
 					<div>
-						<label class="lable-style">
+						<label class="label-style">
 							<input type="radio" name="n" checked />单选
 						</label>
-						<label class="lable-style">
+						<label class="label-style">
 							<input type="radio" name="n" />单选
+						</label>
+						<label class="label-style">
+							单选<input type="radio" name="n" />
 						</label>
 					</div>
 				</li>
 				<li>
+					<label>
+						<input type="checkbox" />
 					<span>多选</span>
-					<div>
-						<label class="lable-style">
-							<input type="checkbox" name="n"  checked/>单选
-						</label>
-						<label class="lable-style">
-							<input type="checkbox" name="n" />单选
-						</label>
-					</div>
+					</label>
+					<label class="label-style">
+						<input type="checkbox" />
+						多项选择
+					</label>
+				</li>	
+				<li class="label-style row">
+					<input type="checkbox" class="pull-left" checked />
+					<span class="pull-right">
+						选项栏
+					</span>
+				</li>
+				<li class="label-style row" >
+					
+					<span>
+						选项栏
+					</span>
+					<input type="checkbox" class="pull-right" />
 				</li>
 			</ul>
+			<fieldset class="con">
+				<legend  class="text-center">滑块</legend>
+				<label class="slider">
+					<input type="checkbox" /><i></i>
+					
+				</label>
+				<li class="slider" style="width: 100%; margin: 5px auto;">
+					<input type="checkbox" /><i></i>
+					
+				</li>
+			</fieldset>
 		</div>
 
 		<script src="//cdn.bootcss.com/zepto/1.1.6/zepto.min.js"></script>
 		<!--ignore-->
-		<script src="/js/jqz-mobui.js"></script>
+		<script src="js/jqz-mobui.js"></script>
 	</body>
 
 </html>
