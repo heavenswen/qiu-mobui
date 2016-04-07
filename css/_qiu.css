@@ -1,0 +1,242 @@
+/****resed*****/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+ul,
+li,
+dl,
+dt,
+dd,
+p,
+span,
+strong,
+input,
+select,
+textarea,
+img,
+div {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body,
+html {
+  font-family: "微软雅黑", Gadget, sans-serif;
+  -webkit-overflow-scrolling: touch;
+  /*允许触摸回弹*/
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /*禁止选中文本*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: 0;
+}
+html {
+  font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/
+}
+body {
+  font-size: 1.4rem;
+  /*1.4 × 10px = 14px */
+  -webkit-text-size-adjust: 100% !important;/*禁止IOS调整字体大小*/
+}
+h1 {
+  font-size: 2.4rem;/*2.4 × 10px = 24px*/
+}
+a img {
+  border: 0 none;
+}
+img {
+  display: block;
+  /*去除可能的1px*/
+  -webkit-touch-callout: none;
+  /*禁止复制图片*/
+  width: 100%;
+  text-align: center;
+}
+ul {
+  list-style: none;
+}
+small {
+  font-size: 80%;
+}
+big {
+  font-size: 120%;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+a,
+img,
+button,
+input,
+optgroup,
+select,
+textarea {
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  /*禁止长按链接与图片弹出菜单*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /*点击高亮透明*/
+  outline: 0;
+  color: inherit;
+  font-size: inherit;
+}
+input::-webkit-input-speech-button {
+  display: none;/*隐藏Android的语音输入按钮*/
+}
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+.btn {
+  display: inline;
+  -webkit-appearance: none;
+  border-radius: 3px;
+  border: 1px solid #bbb;
+  padding: 8px 16px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  transform: translate3D(0, 0, 0);
+  -webkit-transform: translate3D(0, 0, 0);
+}
+.btn {
+  padding: 6px 15px;
+}
+.btn:active,
+.btn.active,
+.btn.active:enabled,
+.btn:enabled:active,
+button.active:enabled,
+button:enabled:active,
+input[type=button].active:enabled,
+input[type=button]:enabled:active,
+input[type=submit].active:enabled,
+input[type=submit]:enabled:active,
+input[type=reset].active:enabled,
+input[type=reset]:enabled:active {
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+/*--disabled--*/
+.disabled {
+  pointer-events: none;
+}
+input[type='button']:disabled,
+input[type='button'].disabled,
+input[type='submit']:disabled,
+input[type='submit'].disabled,
+input[type='reset']:disabled,
+input[type='reset'].disabled,
+button:disabled,
+button.disabled,
+.btn:disabled,
+.btn.disabled {
+  opacity: 0.7;
+}
+textarea,
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=search],
+input[type='datetime-local'],
+input[type='date'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
+input[type='number'],
+input[type='email'],
+input[type='url'],
+input[type='tel'],
+select {
+  padding: 8px;
+  border: 1px solid #bbb;
+  -webkit-appearance: none;
+}
+textarea,
+select:only-child,
+input[type=text]:only-child,
+input[type=search]:only-child,
+input[type='date']:only-child,
+input[type='datetime-local']:only-child,
+input[type='month']:only-child,
+input[type='time']:only-child,
+input[type='week']:only-child,
+input[type='number']:only-child,
+input[type='email']:only-child,
+input[type='url']:only-child,
+input[type='tel']:only-child,
+input[type=password]:only-child {
+  width: 100%;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  -webkit-user-modify: read-write-plaintext-only;
+}
+.lable-style input[type='checkbox'],
+.lable-style input[type='radio'] {
+  -webkit-appearance: none;
+}
+.lable-style input[type='checkbox']:before,
+.lable-style input[type='radio']:before {
+  display: inline-block;
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: #bbb;
+}
+.lable-style input[type='checkbox']:checked:before,
+.lable-style input[type='radio']:checked:before {
+  background: #07BE50;
+}
+/*文本*/
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.small {
+  font-size: 1.2rem;
+}
+.big {
+  font-size: 2.0rem;
+}
+.normal {
+  font-weight: normal;
+}
+/*containar*/
+.none {
+  display: none !important;
+}
+.block {
+  display: table-cell !important;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.fixed {
+  position: fixed !important;
+  z-index: 1;
+}
+/*# sourceMappingURL=_qiu.css.map */

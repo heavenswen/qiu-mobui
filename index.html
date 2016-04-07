@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>手机ui模块</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!--ios-->
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<meta name="author" content="slcw">
+<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="/css/qiu-mobui.css" />
+	</head>
+		<style>
+			ul h2{ text-align: center; font-weight: normal;font-size: 1.6rem;}
+			ul li{ margin-bottom: 10px;}
+		</style>
+	<body>
+		<header class=" fixed header">
+			<a class="pull-left icon icon-back back "></a>
+			<a href="index1.html" class="pull-right">登录</a>
+			<h1 class="title normal">QIU.moble.ui</h1>
+
+		</header>
+		<nav class="fixed tab">
+			<a href="#" class="col-xs-3">
+				<span class="icon icon-home"></span>
+				option1</a>
+			<a href="#" class="col-xs-3">
+				<span class="icon icon-home"></span>
+				option2
+			</a>
+			<a href="#" class="col-xs-3">
+				<span class="icon icon-home"></span>
+				option3
+			</a>
+			<a href="#" class="col-xs-3">
+				<span class="icon icon-home"></span>
+				option4
+			</a>
+			
+		</nav>
+		<div class="content">
+			<ul class="list-inline text-center">
+				<h2 class="col-xs-12">同列布局</h1>
+				<li class="col-xs-4">1</li>
+				<li class="col-xs-4">2</li>
+				<li class="col-xs-4">3</li>
+			</ul>
+			<ul class="con text-center">
+				<h2 class="col-xs-12 normal">
+					按钮
+				</h2>
+				<li >
+					
+					<input type="button" value="sub">
+					<input type="submit"  value="sub"/>
+					
+					<input type="reset" value="sub" />
+					<input type="button" value="sub" class="active">
+					<input type="button" value="sub" disabled="disabled">	
+				</li>
+				<li>
+					<a class="btn">sub</a>
+					<span class="btn">sub</span>
+					<button>sub</button>
+					<a class="btn active">sub</a>
+					<button class="disabled">sub</button>
+					
+				</li>
+				
+			</ul>
+			<ul class="con">
+				<li>
+					<input type="text" placeholder="单个100%显示" />
+				</li>
+				<li>
+					<span>标题</span>
+					<input type="text" placeholder="标题存在时" />
+				</li>
+				<li>
+					<select>
+						<option>
+							单个select
+						</option>
+					</select>
+				</li>
+				<li>
+					<span>标题</span>
+					<select>
+						<option>多个select</option>
+					</select>
+				</li>
+				<li>
+					<span>单选</span>
+					<div>
+						<label class="lable-style">
+							<input type="radio" name="n" checked />单选
+						</label>
+						<label class="lable-style">
+							<input type="radio" name="n" />单选
+						</label>
+					</div>
+				</li>
+				<li>
+					<span>多选</span>
+					<div>
+						<label class="lable-style">
+							<input type="checkbox" name="n"  checked/>单选
+						</label>
+						<label class="lable-style">
+							<input type="checkbox" name="n" />单选
+						</label>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<script src="//cdn.bootcss.com/zepto/1.1.6/zepto.min.js"></script>
+		<!--ignore-->
+		<script src="/js/jqz-mobui.js"></script>
+	</body>
+
+</html>
