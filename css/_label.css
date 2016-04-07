@@ -1,0 +1,29 @@
+/**多选项单选项**/
+.label-style {
+  line-height: 2.0rem;
+}
+.label-style > input[type='checkbox'],
+.label-style > input[type='radio'] {
+  width: 2.0rem;
+  height: 2.0rem;
+  line-height: inherit;
+  -webkit-appearance: none;
+  overflow: hidden;
+  background-color: #ccc;
+  color: #fff;
+  text-align: center;
+}
+.label-style > input[type='checkbox']:checked,
+.label-style > input[type='radio']:checked {
+  background: #07BE50;
+  font-family: 'iconfont';
+}
+.label-style > input[type='checkbox']:checked:before,
+.label-style > input[type='radio']:checked:before {
+  content: '\e603';
+}
+.label-style > input[type='radio'],
+.label-style > input[type='radio']:before {
+  border-radius: 50%;
+}
+/*# sourceMappingURL=_label.css.map */

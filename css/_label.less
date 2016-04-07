@@ -1,0 +1,46 @@
+
+@font-b:2.0rem;
+@font-m: 1.6rem;
+@font:1.4rem;
+@ccc:#ccc;
+@checked:#07BE50;
+.transition(@s:.3s){
+    transition: all @s linear;
+    -webkit-transition: all @s linear;
+}
+.ht(){
+      background: #3399FF;
+      color: #fff;
+}
+.box-shadow(@x:1px,@w:2px,@c:rgba(0,0,0,0.3)){
+     box-shadow: 0 @x @w @c;
+}
+/**多选项单选项**/
+.label-style{
+    
+    line-height:@font-b;
+    > input[type='checkbox'],
+    > input[type='radio']
+    {
+        width: @font-b;
+        height: @font-b;
+        line-height: inherit;
+        -webkit-appearance: none;
+         overflow: hidden;
+         background-color: @ccc;
+         color: #fff;
+         text-align: center;
+        &:checked{
+             background: @checked;
+             font-family: 'iconfont';
+            &:before{
+                content: '\e603';
+            }
+        }
+    } 
+}
+
+.label-style > input[type='radio'],
+.label-style > input[type='radio']:before{
+    border-radius: 50%;
+}

@@ -1,0 +1,59 @@
+/*
+ * 滑块
+ */
+@font-b:2.0rem;
+@font-m: 1.6rem;
+@font:1.4rem;
+@ccc:#ccc;
+@checked:#07BE50;
+.transition(@tranr:all,@s:.3s){
+    transition:@tranr @s linear;
+    -webkit-transition: @tranr @s linear;
+}
+.ht(){
+      background: #3399FF;
+      color: #fff;
+}
+.box-shadow(@x:0px,@y:1px,@w:2px,@c:rgba(0,0,0,0.3)){
+     box-shadow: @x @y @w @c;
+}
+/****/
+.slider{
+    display: block;
+    position: relative;
+    width: 120px;
+    height: @font-b*1.5; 
+    > input[type='checkbox']{  
+         -webkit-appearance: none;   
+         display:block;
+         width: 100%;
+         height: 100%;
+         background-color: @ccc;
+         border-radius: @font-b*1.5;
+          .box-shadow(2px,2px);
+          .transition();
+          &:checked{
+            background-color:@checked ;  
+          }
+     }
+     >input~i{
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: auto;
+        top:0;
+         height: @font-b*1.5;
+         width:@font-b*1.5;
+         background: #fff;
+         border-radius: 50%;
+         border: 1px solid @ccc;
+         .box-shadow();
+         .transition(); 
+     }
+     >input:checked~i{
+         left: 100%;
+          margin-left: -(@font-b*1.5);
+     }
+}
+        
