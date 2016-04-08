@@ -2,11 +2,11 @@
  * 滑块
  */
 @font-b:2.0rem;
-@font-m: 1.6rem;
+@font-m: 1.8rem;
 @font:1.4rem;
 @ccc:#ccc;
 @checked:#07BE50;
-.transition(@tranr:all,@s:.3s){
+.transition(@s:.3s,@tranr:all){
     transition:@tranr @s linear;
     -webkit-transition: @tranr @s linear;
 }
@@ -19,41 +19,63 @@
 }
 /****/
 .slider{
-    display: block;
+    display: inline-block;
     position: relative;
-    width: 120px;
-    height: @font-b*1.5; 
-    > input[type='checkbox']{  
+    vertical-align: middle;
+    min-width: 5.0rem;
+    height: @font-m*1.5;
+    > input[type='checkbox'],
+     > input[type='radio']{
+         appearance: none;  
          -webkit-appearance: none;   
          display:block;
          width: 100%;
          height: 100%;
          background-color: @ccc;
-         border-radius: @font-b*1.5;
+         border-radius: @font-m*1.5;
           .box-shadow(2px,2px);
-          .transition();
+          .transition(.2s);
+          &:before{
+            content: attr(data-f);
+            position: absolute;
+            top:50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: 15%;
+            
+        }
           &:checked{
-            background-color:@checked ;  
+            background-color:@checked ;
+            &:checked:before{
+            color: #fff;
+            content: attr(data-t);
+            left: 15%;
+            right: auto;
+        }
           }
      }
-     >input~i{
+     > input[type='checkbox']~i,
+     > input[type='radio']~i{
         display: block;
         content: '';
         position: absolute;
         left: 0;
         right: auto;
         top:0;
-         height: @font-b*1.5;
-         width:@font-b*1.5;
+         height: @font-m*1.5;
+         width:@font-m*1.5;
          background: #fff;
          border-radius: 50%;
          border: 1px solid @ccc;
          .box-shadow();
-         .transition(); 
+         .transition(.2s); 
      }
      >input:checked~i{
          left: 100%;
-          margin-left: -(@font-b*1.5);
+         -webkit-transform: translateX(-100%);
+         transform: translateX(-100%);
      }
 }
-        
+.slider.sm{
+    min-width: @font-m*2;
+}      

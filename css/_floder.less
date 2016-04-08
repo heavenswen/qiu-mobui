@@ -1,0 +1,30 @@
+.transition(@s:.3s){
+    transition: all @s linear;
+    -webkit-transition: all @s linear;
+}
+
+
+.transition(@s:.3s,@tranr:all){
+    transition:@tranr @s linear;
+    -webkit-transition: @tranr @s linear;
+}
+
+.floder{
+   .floder-t>.icon{
+       .transition(.2s);
+   }
+    .floder-c>li{
+        height: 0;
+        overflow: hidden;
+        .transition()
+    }
+}
+.floder.active {
+    .floder-t>.icon{
+        -webkit-transform:rotate(180deg) ;
+        transform:rotate(180deg) ;
+    }
+    .floder-c>li{
+        min-height: 25px;     
+    }
+}

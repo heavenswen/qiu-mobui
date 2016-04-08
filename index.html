@@ -5,12 +5,17 @@
 		<meta charset="utf-8">
 		<title>手机ui模块</title>
 		<link rel="import" href="_meta.html?__inline" />
-		<link rel="stylesheet" href="css/qiu-mobui.css" />
+		<link rel="stylesheet" href="css/_qiu.css" />
+		<link rel="stylesheet" href="css/_col-xs.css" />
+		<link rel="stylesheet" href="css/_containar.css" />
+		<link rel="stylesheet" href="css/_label.css" />
+		<link rel="stylesheet" href="css/_slider.css" />
+		<link rel="stylesheet" href="css/_floder.css" />
 	</head>
 		<style>
 			ul h2{ text-align: center; font-weight: normal;font-size: 1.6rem;}
 			ul li{ margin-bottom: 10px;}
-			li.label-style{
+			.floder li{
 				background: #fcc !important;
 			}
 		</style>
@@ -62,9 +67,9 @@
 				<li>
 					<a class="btn">sub</a>
 					<span class="btn">sub</span>
-					<button>sub</button>
+					<button type="button">sub</button>
 					<a class="btn active">sub</a>
-					<button class="disabled">sub</button>
+					<button class="disabled" type="submit">sub</button>
 					
 				</li>
 				
@@ -128,22 +133,54 @@
 					<input type="checkbox" class="pull-right" />
 				</li>
 			</ul>
-			<fieldset class="con">
+			<fieldset class="main">
 				<legend  class="text-center">滑块</legend>
-				<label class="slider">
-					<input type="checkbox" /><i></i>
+				<ul>
+					<li class="row">
+						<span class="inline">小型滑块+sm</span>
+						<label class="slider sm pull-right">
+							<input type="checkbox" />
+							<i></i>
+						</label>
+					</li>
+					<li class="row">
+						默认滑块
+						<label class="slider pull-right" >
+							<input type="checkbox" name="slider"/><i></i>
 					
-				</label>
-				<li class="slider" style="width: 100%; margin: 5px auto;">
-					<input type="checkbox" /><i></i>
-					
-				</li>
+						</label>
+					</li>
+					<li class="row">
+						带文字滑块
+						<label class="slider pull-right">
+							<input type="checkbox"   data-t='Y' data-f ='N' /><i></i>
+						</label>
+					</li>
+				</ul>
 			</fieldset>
+			<fieldset class="main">
+				<legend class="text-center">折叠栏</legend>
+				<div class="floder active">
+					<a class="floder-t" >
+						点击下拉选项
+						
+						<i class="icon icon-fold pull-right"></i>
+					</a>
+					<ul class="floder-c">
+						<li class="">选项1</li>
+						<li>选项2</li>
+					</ul>
+				</div>
+			</fieldset>
+			<fieldset class="main">
+				<legend class="text-center">自动计算块</legend>
+			</fieldset>
+			
 		</div>
 
 		<script src="//cdn.bootcss.com/zepto/1.1.6/zepto.min.js"></script>
 		<!--ignore-->
-		<script src="js/jqz-mobui.js"></script>
+		<script src="js/_page.js"></script>
 	</body>
 
 </html>

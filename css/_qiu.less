@@ -1,16 +1,14 @@
-/*
- * 基层样式
- */
+
 @font-s:1.2rem;
 @font-m:1.6rem;
 @font-b:2.0rem;
+@pm:10px;
 @ccc:#bbb;
 .inh(){
     color: inherit;
     font-size: inherit
 }
 
-/****resed*****/
 body,
 h1,
 h2,
@@ -244,6 +242,10 @@ label{
 .none{
     display: none !important;
 }
+.inline{
+    vertical-align: middle;
+    display: inline-block;
+}
 .block{
     display: table-cell !important;
 }
@@ -260,8 +262,8 @@ label{
 .con,
 .header,
 .tab{
-    padding: 10px;
-    padding-right: 10px;
+    padding-left:@pm;
+    padding-right:@pm;
 }
 .row{ 
     
@@ -275,4 +277,7 @@ label{
        
     }
 }
-
+.main{
+    margin-left:@pm;
+    margin-right: @pm;
+}
