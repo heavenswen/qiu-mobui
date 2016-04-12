@@ -2,20 +2,22 @@
 <html>
 
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf8">
 		<title>手机ui模块</title>
 		<link rel="import" href="_meta.html?__inline" />
 		<link rel="stylesheet" href="css/_qiu.css" />
+		<link rel="stylesheet" href="css/_font.css" />
 		<link rel="stylesheet" href="css/_col-xs.css" />
 		<link rel="stylesheet" href="css/_containar.css" />
 		<link rel="stylesheet" href="css/_label.css" />
 		<link rel="stylesheet" href="css/_slider.css" />
 		<link rel="stylesheet" href="css/_floder.css" />
+		<link rel="stylesheet" href="css/jqz-banner.css"/>
 	</head>
 		<style>
 			ul h2{ text-align: center; font-weight: normal;font-size: 1.6rem;}
 			ul li{ margin-bottom: 10px;}
-			.floder li{
+			.floder{
 				background: #fcc !important;
 			}
 		</style>
@@ -45,6 +47,17 @@
 			
 		</nav>
 		<div class="content">
+			<div class="banner">
+				<ul class="">
+					<li class="cell"><a>
+						<img src="images/img04.jpg" />
+					</a></li>
+					<li class="cell"><a>
+						<img src="images/img04.jpg" />
+					</a></li>
+				</ul>
+				<nav class="banner-nav"></nav>
+			</div>
 			<ul class="list-inline text-center">
 				<h2 class="col-xs-12">同列布局</h1>
 				<li class="col-xs-4">1</li>
@@ -133,7 +146,7 @@
 					<input type="checkbox" class="pull-right" />
 				</li>
 			</ul>
-			<fieldset class="main">
+			<fieldset class="main con">
 				<legend  class="text-center">滑块</legend>
 				<ul>
 					<li class="row">
@@ -158,29 +171,45 @@
 					</li>
 				</ul>
 			</fieldset>
-			<fieldset class="main">
+			<fieldset class="main con">
 				<legend class="text-center">折叠栏</legend>
-				<div class="floder active">
+				<div class="floder">
 					<a class="floder-t" >
 						点击下拉选项
 						
-						<i class="icon icon-fold pull-right"></i>
+						<i class="icon icon-unfold pull-right"></i>
 					</a>
 					<ul class="floder-c">
-						<li class="">选项1</li>
+						<li>选项1</li>
 						<li>选项2</li>
 					</ul>
 				</div>
+				<div class="floder active">
+					<a class='floder-t'>下拉列表</a>
+					<ul class="floder-c">
+						<li>内容</li>
+						<li>内容</li>
+					</ul>
+				</div>
 			</fieldset>
-			<fieldset class="main">
+			<fieldset class="main con">
 				<legend class="text-center">自动计算块</legend>
 			</fieldset>
-			
+			<fieldset class="main con">
+				<legend class="text-center">添加图片</legend>
+			</fieldset>
 		</div>
 
 		<script src="//cdn.bootcss.com/zepto/1.1.6/zepto.min.js"></script>
 		<!--ignore-->
+		<!--<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script><!--jq-->
 		<script src="js/_page.js"></script>
+		<script type="text/javascript" src="js/jqz-banner.js" ></script>
+		<script>
+			$(function(){
+				var banner = new $.jqz_banner({nav:'.banner-nav'})
+			})
+		</script>
 	</body>
 
 </html>

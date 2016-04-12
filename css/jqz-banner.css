@@ -1,0 +1,44 @@
+.banner {
+	position: relative;
+	overflow: hidden;
+}
+
+.banner ul {
+	white-space: nowrap;
+	font-size: 0;
+}
+
+.banner .cell {
+	display: inline-block;
+	width: 100%;
+	vertical-align: middle;
+	font-size: 14px;
+}
+
+.banner .cell img {
+	display: block;
+	width: 100%;
+}
+
+.banner-nav {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+	font-size: 0;
+}
+
+.banner-nav a {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin-right: 8px;
+	border-radius: 50%;
+	background: #eee;
+}
+
+.banner-nav a.active {
+	background: #07BE50;
+}

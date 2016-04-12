@@ -5,8 +5,8 @@
 .floder .floder-c > li {
   height: 0;
   overflow: hidden;
-  transition: all .3s linear;
-  -webkit-transition: all .3s linear;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
 }
 .floder.active .floder-t > .icon {
   -webkit-transform: rotate(180deg);
