@@ -1,27 +1,42 @@
+var min = false,
+	css = '/css/*.css',
+	js = '/js/*.js',
+	lib ='/lib/';//默认文件夹 
+
+
 
 fis.match('::packager', 
     { postpackager: fis.plugin('loader', { allInOne: false })
 });
-fis.match('{_,jqz}*.css',{
-	optimizer: fis.plugin('clean-css'),
-	packTo:'css/qiu-mobui.min.css'
-})
-fis.match('{_,jqz}*.js',{
-	optimizer: fis.plugin('uglify-js'),
-	packTo:'js/qiu-mobui.min.js',
-})
-fis.match('{_,jqz}*.css',{
-	release:'css/qiu-mobui.css',
-})
-fis.match('{_,jqz}*.js',{
-	release:'js/qiu-mobui.js',
-})
+if(min){
+	//生成min版
+	fis.match(css,{
+		packTo:lib+'css/qiu-mobui.min.css',
+		optimizer: fis.plugin('clean-css'),
+		release:lib+'css/qiu-mobui.min.css',
+	})
+	fis.match(js,{
+		packTo:lib+'js/qiu-mobui.min.js',
+		optimizer: fis.plugin('uglify-js'),
+		release:lib+'js/qiu-mobui.min.js',
+	})
+}else{
+	//普通版
+	fis.match(css,{
+		packTo:lib+'css/qiu-mobui.css'
+	})
+	fis.match(js,{
+		packTo:lib+'js/qiu-mobui.js'
+	})
+}
 
-/*过滤*/
-fis.match('/fonts/*.css',{
-	release:false,
+fis.match('/fonts/*.{ttf,woff,eot,svg}',{
+	release:lib+'$0',
 })
 fis.match('*.{less,html,md,png,jpg}',{
+	release:false
+})
+fis.match(lib+'*.*',{
 	release:false
 })
 
@@ -29,5 +44,5 @@ fis.media('hb').match('*.{css,js}',{
 	useHash:true,
 })
 fis.media('hb').match('*.*',{
-	release:'/trunk/$0'
+	release:'./trunk/$0'
 })
