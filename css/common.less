@@ -1,0 +1,27 @@
+/*
+ * qiu的通用 less
+ */
+@font-s:1.2rem;
+@font-m:1.6rem;
+@font-b:2.0rem;
+@font:1.4rem;
+@pm:10px;
+@ccc:#bbb;
+@font:1.4rem;
+@checked:#07BE50;
+.inh(){
+    color: inherit;
+    font-size: inherit
+}
+
+.ht(){
+      background: #3399FF;
+      color: #fff;
+}
+.box-shadow(@x:1px,@w:2px,@c:rgba(0,0,0,0.3)){
+     box-shadow: 0 @x @w @c;
+}
+.transition(@s:.3s,@tranr:all){
+    transition:@tranr @s linear;
+    -webkit-transition: @tranr @s linear;
+}

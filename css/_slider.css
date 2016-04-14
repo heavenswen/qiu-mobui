@@ -4,7 +4,7 @@
   position: relative;
   vertical-align: middle;
   min-width: 5.0rem;
-  height: 2.7rem;
+  height: 2.4000000000000004rem;
 }
 .slider > input[type='checkbox'],
 .slider > input[type='radio'] {
@@ -13,9 +13,9 @@
   display: block;
   width: 100%;
   height: 100%;
-  background-color: #ccc;
-  border-radius: 2.7rem;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  background-color: #bbb;
+  border-radius: 2.4000000000000004rem;
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
   transition: all .2s linear;
   -webkit-transition: all .2s linear;
 }
@@ -47,12 +47,12 @@
   left: 0;
   right: auto;
   top: 0;
-  height: 2.7rem;
-  width: 2.7rem;
+  height: 2.4000000000000004rem;
+  width: 2.4000000000000004rem;
   background: #fff;
   border-radius: 50%;
-  border: 1px solid #ccc;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  border: 1px solid #bbb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   transition: all .2s linear;
   -webkit-transition: all .2s linear;
 }
@@ -62,6 +62,6 @@
   transform: translateX(-100%);
 }
 .slider.sm {
-  min-width: 3.6rem;
+  min-width: 3.2rem;
 }
 /*# sourceMappingURL=_slider.css.map */

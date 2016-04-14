@@ -143,7 +143,7 @@ button:disabled,
 button.disabled,
 .btn:disabled,
 .btn.disabled {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 textarea,
 input[type=text],

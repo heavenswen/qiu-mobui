@@ -1,22 +1,7 @@
 /*
  * 滑块
  */
-@font-b:2.0rem;
-@font-m: 1.8rem;
-@font:1.4rem;
-@ccc:#ccc;
-@checked:#07BE50;
-.transition(@s:.3s,@tranr:all){
-    transition:@tranr @s linear;
-    -webkit-transition: @tranr @s linear;
-}
-.ht(){
-      background: #3399FF;
-      color: #fff;
-}
-.box-shadow(@x:0px,@y:1px,@w:2px,@c:rgba(0,0,0,0.3)){
-     box-shadow: @x @y @w @c;
-}
+@import 'common';
 /****/
 .slider{
     display: inline-block;
@@ -33,7 +18,7 @@
          height: 100%;
          background-color: @ccc;
          border-radius: @font-m*1.5;
-          .box-shadow(2px,2px);
+          .box-shadow(0.2rem,0.2rem);
           .transition(.2s);
           &:before{
             content: attr(data-f);
