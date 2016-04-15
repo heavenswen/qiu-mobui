@@ -1,4 +1,7 @@
 .col-xs-12 {
+ /*
+ * @require css/_qiu.css
+ */
   width: 100%;
 }
 .col-xs-11 {

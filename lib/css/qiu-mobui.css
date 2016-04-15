@@ -144,7 +144,7 @@ button:disabled,
 button.disabled,
 .btn:disabled,
 .btn.disabled {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 textarea,
 input[type=text],
@@ -252,11 +252,10 @@ label input {
 /*# sourceMappingURL=_qiu.css.map */
 
 /*!/css/_col-xs.css*/
-/*
- @require css/_qiu.css
- @require css/_col-xs.css
- */
 .col-xs-12 {
+ /*
+ * @require css/_qiu.css
+ */
   width: 100%;
 }
 .col-xs-11 {
@@ -364,12 +363,12 @@ label input {
 /*font-icon*/
 @font-face {
   font-family: "iconfont";
-  src: url('/lib/fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot');
   /* IE9*/
-  src: url('/lib/fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('/lib/fonts/iconfont.woff') format('woff'), /* chrome, firefox */
-  url('/lib/fonts/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('/lib/fonts/iconfont.svg#iconfont') format('svg');/* iOS 4.1- */
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.svg#iconfont') format('svg');/* iOS 4.1- */
 }
 .icon {
   font-family: "iconfont" !important;
@@ -466,7 +465,7 @@ label input {
   appearance: none;
   -webkit-appearance: none;
   overflow: hidden;
-  background-color: #ccc;
+  background-color: #bbb;
   color: #fff;
   text-align: center;
 }
@@ -492,7 +491,7 @@ label input {
   position: relative;
   vertical-align: middle;
   min-width: 5.0rem;
-  height: 2.7rem;
+  height: 2.4rem;
 }
 .slider > input[type='checkbox'],
 .slider > input[type='radio'] {
@@ -501,9 +500,9 @@ label input {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: #ccc;
-  border-radius: 2.7rem;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  background-color: #bbb;
+  border-radius: 2.4rem;
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
   transition: all .2s linear;
   -webkit-transition: all .2s linear;
 }
@@ -535,12 +534,12 @@ label input {
   left: 0;
   right: auto;
   top: 0;
-  height: 2.7rem;
-  width: 2.7rem;
+  height: 2.4rem;
+  width: 2.4rem;
   background: #fff;
   border-radius: 50%;
-  border: 1px solid #ccc;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  border: 1px solid #bbb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   transition: all .2s linear;
   -webkit-transition: all .2s linear;
 }
@@ -550,9 +549,12 @@ label input {
   transform: translateX(-100%);
 }
 .slider.sm {
-  min-width: 3.6rem;
+  min-width: 3.2rem;
 }
 /*# sourceMappingURL=_slider.css.map */
+
+/*!/css/common.css*/
+/*# sourceMappingURL=common.css.map */
 
 /*!/css/jqz-banner.css*/
 .banner {
