@@ -13,6 +13,6 @@
   transform: rotate(180deg);
 }
 .floder.active .floder-c > li {
-  min-height: 25px;
+  height: 30px;
 }
 /*# sourceMappingURL=_floder.css.map */
