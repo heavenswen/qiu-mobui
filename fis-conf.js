@@ -1,7 +1,8 @@
 /*
  * 2016-04-15
  */
-var name = 'qiu-mobui',
+var 
+	name = 'qiu-mobui',
 	css = '/css/*.css',
 	js = '/js/*.js',
 	re = false;
@@ -44,7 +45,7 @@ fis.media('dist').match('**', {
 		})
 	]
 })
-fis.media('dist').match('*.{png,gif,jpg,html,htm}', {
+fis.media('dist').match('*.{css,js,png,gif,jpg,html,htm}', {
 	release:false
 })
 fis.media('dist').match(js,{
@@ -54,4 +55,15 @@ fis.media('dist').match(js,{
 fis.media('dist').match(css,{
 	 optimizer: fis.plugin('clean-css'),
 	 release:'./css/'+name+'.min.css'
+})
+fis.media('hb').match('*.{css,js}',{
+	 useHash:true,
+})
+fis.media('hb').match(js,{
+	optimizer: fis.plugin('clean-js'),
+	 release:'./css/'+name+'.js'
+})
+fis.media('hb').match(css,{
+	optimizer: fis.plugin('clean-css'),
+	 release:'./css/'+name+'.css'
 })

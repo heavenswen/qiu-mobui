@@ -78,8 +78,8 @@
 					<input type="button" value="sub" disabled="disabled">	
 				</li>
 				<li>
-					<a class="btn">sub</a>
-					<span class="btn">sub</span>
+					<a class="btn" id="rem">rem</a>
+					<span class="btn" style="background: #39f;">sub</span>
 					<button type="button">sub</button>
 					<a class="btn active">sub</a>
 					<button class="disabled" type="submit">sub</button>
@@ -199,15 +199,20 @@
 				<legend class="text-center">添加图片</legend>
 			</fieldset>
 		</div>
-
-		<script src="lib/zepto.1.6.min.js"></script>
+		<script type="text/javascript" src="lib/zepto.1.6.min.js"></script>
 		<!--ignore-->
 		<!--<script src="lib/jquery-2.1.4.min.js"></script><!--jq-->
-		<script src="js/_page.js"></script>
+		<script type="text/javascript" src="js/_page.js"></script>
+		<script type="text/javascript" src="js/_floder.js" ></script>
+		<script type="text/javascript" src="js/_rem.js"></script>
 		<script type="text/javascript" src="js/jqz-banner.js" ></script>
 		<script>
 			$(function(){
 				var banner = new $.jqz_banner({nav:'.banner-nav'})
+				$("#rem").click(function(){
+					rem_clean();
+					$('html').attr('style','');
+				})
 			})
 		</script>
 	</body>

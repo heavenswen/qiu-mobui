@@ -22,7 +22,7 @@
 
 .banner-nav {
 	position: absolute;
-	bottom: 20px;
+	bottom: 2.0rem;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -32,9 +32,9 @@
 
 .banner-nav a {
 	display: inline-block;
-	width: 8px;
-	height: 8px;
-	margin-right: 8px;
+	width:0.8rem;
+	height:0.8rem;
+	margin-right:0.8rem;
 	border-radius: 50%;
 	background: #eee;
 }
