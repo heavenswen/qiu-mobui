@@ -1,23 +1,24 @@
 /*
- * 2016-04-15
+ * web基本配置 2016-05-17
  */
 var 
 	name = 'qiu-mobui',
-	css = '/css/*.css',
-	js = '/js/*.js',
-	re = false;
+	css = '/css/_*.css',
+	js = '/js/_*.js';
 
 fis.match('::packager', {
 	postpackager: fis.plugin('loader', {
-		allInOne: true
+		allInOne: false
 	})
 });
-
 fis.match('*.{less,md}', {
 	loaderLang: false,
 	release: false
 })
-
+fis.match('_*.{html,htm,js,css}', {
+	loaderLang: false,
+	release: false
+})
 fis.match('fonts/*.{css,html}', {
 	release: false
 })
@@ -30,13 +31,18 @@ fis.match('./dist/*', {
 	release: false
 })
 /*合并*/
-fis.match(css, {
-	packTo: "/css/" + name + ".css",
+fis.match(js,{
+	 optimizer: fis.plugin('uglify-js'),
+	 release:'./js/'+name+'.min.js'
 })
-fis.match(js, {
-	packTo: '/js/' + name + '.js',
+fis.match(css,{
+	 optimizer: fis.plugin('clean-css'),
+	 release:'./css/'+name+'.min.css'
 })
 /*生成应用版*/
+fis.media('dist').match('*.{css,js,png,gif,jpg,html,htm}', {
+	release:false
+})
 fis.media('dist').match('**', {
 	deploy: [
 		fis.plugin('skip-packed'),
@@ -45,25 +51,7 @@ fis.media('dist').match('**', {
 		})
 	]
 })
-fis.media('dist').match('*.{css,js,png,gif,jpg,html,htm}', {
-	release:false
-})
-fis.media('dist').match(js,{
-	 optimizer: fis.plugin('uglify-js'),
-	 release:'./js/'+name+'.min.js'
-})
-fis.media('dist').match(css,{
-	 optimizer: fis.plugin('clean-css'),
-	 release:'./css/'+name+'.min.css'
-})
+/*测试*/
 fis.media('hb').match('*.{css,js}',{
 	 useHash:true,
-})
-fis.media('hb').match(js,{
-	optimizer: fis.plugin('clean-js'),
-	 release:'./css/'+name+'.js'
-})
-fis.media('hb').match(css,{
-	optimizer: fis.plugin('clean-css'),
-	 release:'./css/'+name+'.css'
 })
